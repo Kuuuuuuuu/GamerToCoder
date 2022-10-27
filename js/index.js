@@ -5,6 +5,7 @@ function start() {
     let offset = 0;
     let forwards = true;
     let skip_count = 0;
+    document.title = "Hacking...";
     const interval = setInterval(() => {
         if (forwards) {
             if (offset >= words[i].length) {
@@ -22,6 +23,7 @@ function start() {
                 i = 0;
                 forwards = false;
                 offset = 0;
+                document.title = "Gamer To Coder";
                 document.getElementById("hacking").style.display = "none";
                 document.getElementById("body").style.backgroundColor = "black";
                 document.getElementById("main").style.display = "flex";
