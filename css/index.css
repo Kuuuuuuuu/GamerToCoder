@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+body {
+    background-color: rgb(25,25,25);
+}
+
+.typewriter {
+    color: limegreen;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    font-family: 'Anonymous Pro', monospace;
+}
