@@ -2,6 +2,8 @@
 
 * {
     cursor: url("../images/cursor.png") 1 1, auto;
+    margin: auto;
+    padding: 0;
 }
 
 body {
@@ -23,17 +25,14 @@ body {
 }
 
 #main {
-    display: none;
     position: relative;
+    display: none;
 }
 
 .center-items {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-}
-
-.center-text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
     text-align: center;
 }
 

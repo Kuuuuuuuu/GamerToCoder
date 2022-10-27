@@ -25,6 +25,7 @@ function start() {
                 document.getElementById("hacking").style.display = "none";
                 document.getElementById("body").style.backgroundColor = "black";
                 document.getElementById("main").style.display = "flex";
+                document.getElementById("main").style.animation = "none";
                 document.getElementById("body").style.background = "url('../images/blockmangowallpaper.png') no-repeat center center fixed";
                 clearInterval(interval);
             }
