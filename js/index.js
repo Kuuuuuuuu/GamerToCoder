@@ -19,9 +19,14 @@ function start() {
             i++;
             offset = 0;
             if (i >= length) {
-                clearInterval(interval);
+                i = 0;
+                forwards = false;
+                offset = 0;
                 document.getElementById("hacking").style.display = "none";
-                document.getElementById("main").style.backgroundColor = "black";
+                document.getElementById("body").style.backgroundColor = "black";
+                document.getElementById("main").style.display = "flex";
+                document.getElementById("body").style.background = "url('../images/blockmangowallpaper.png') no-repeat center center fixed";
+                clearInterval(interval);
             }
         }
         if (skip_count === 0) {
@@ -32,5 +37,5 @@ function start() {
             }
         }
         document.getElementById("hacking-text").innerHTML = words[i].substring(0, offset);
-    }, 50);
+    }, 40);
 }

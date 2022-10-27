@@ -1,10 +1,43 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
-body {
-    background-color: rgb(25,25,25);
+* {
+    cursor: url("../images/cursor.png") 1 1, auto;
 }
 
-.typewriter {
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    display: table-cell;
+    vertical-align: middle;
+    background: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#main {
+    display: none;
+    position: relative;
+}
+
+.center-items {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.hack-text {
     color: limegreen;
     overflow: hidden;
     white-space: nowrap;
