@@ -1,0 +1,87 @@
+.card {
+    width: 350px;
+    height: 400px;
+    background-color: #ecfefa;
+    text-align: center;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 10px;
+    margin: 10px;
+    transform-origin: center;
+    transform: perspective(800px) rotateY(10deg);
+    transition: 0.5s;
+    border-radius: 10px;
+    display: inline-block;
+    z-index: -20;
+}
+
+a:link {
+    color: #000000;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+@keyframes spring {
+    15% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1.2, 1.1);
+    }
+
+    40% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(0.95, 0.95);
+    }
+
+    75% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1.05, 1);
+    }
+
+    100% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1, 1);
+    }
+}
+
+.card:hover {
+    transform: perspective(800px) rotateY(0deg);
+    animation: spring 300ms ease-out;
+}
+
+.card img {
+    width: 200px;
+}
+
+.genre {
+    font-size: 17px;
+}
+
+.detail {
+    font-size: 15px;
+}
+
+.card .detail {
+    height: 120px;
+    overflow-y: scroll;
+}
+
+.card:hover {
+    background-color: white;
+}
+
+.name:hover {
+    color: red;
+    cursor: pointer;
+}
+
+#gamelist {
+    display: none;
+    margin-top: 20rem;
+}
