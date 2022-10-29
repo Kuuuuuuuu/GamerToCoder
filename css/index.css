@@ -4,6 +4,22 @@
     cursor: url("../images/cursor.png") 1 1, auto;
     margin: auto;
     padding: 0;
+    scrollbar-width: auto;
+    scrollbar-color: #ff7300 rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ff7300;
+    border-radius: 10px;
+    border: 3px rgba(0, 0, 0, 0);
 }
 
 body {

@@ -1,7 +1,7 @@
 .card {
     width: 350px;
     height: 400px;
-    background-color: #ecfefa;
+    background-color: rgba(147, 224, 248, 0.86);
     text-align: center;
     border-width: 1px;
     border-color: black;
@@ -73,7 +73,7 @@ a:hover {
 }
 
 .card:hover {
-    background-color: white;
+    background-color: #FFFFFF;
 }
 
 .name:hover {

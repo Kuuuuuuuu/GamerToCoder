@@ -65,12 +65,10 @@ function loadGame() {
                     }
                 }
                 const html =
-                    `<a href=${currentData.icon}>` +
                     '<div class="name" onclick="changeName(' + currentData.name + ')"> ชื่อ: ' + currentData.name + '</div>'
                     + '<img src="' + currentData.icon + '" alt="icon"/>'
                     + '<div class="genre">ประเภท: ' + genre_string + '</div>'
                     + '<div class="detail">' + currentData.description + '</div>'
-                    + '</a>';
                 newListItem.innerHTML = html.trim();
                 document.getElementById("gamelist").appendChild(newListItem);
             }
