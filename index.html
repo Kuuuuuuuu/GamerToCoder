@@ -5,12 +5,13 @@
     <title>Gamer To Coder</title>
     <script async defer src="./js/index.js"></script>
     <link href="./css/index.css" rel="stylesheet">
+    <link href="./css/gamelist.css" rel="stylesheet">
     <meta content="Kuuuuuuuu, wuw6248(wuw-sh)" name="Author">
     <meta content="en" http-equiv="Content-Language">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 </head>
 
-<body id="body" onload="start()">
+<body id="body" onload="start(); loadGame();">
 <div id="nav-base">
     <div class="nav">
         <input id="nav-check" type="checkbox">
@@ -39,6 +40,8 @@
             <h1>Blockman-GO</h1>
         </div>
     </div>
+    <!-------- Game list -------->
+    <div id="gamelist"></div>
 </div>
 </body>
 </html>
