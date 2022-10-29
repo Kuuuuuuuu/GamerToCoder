@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Gamer To Coder</title>
-    <script async defer src="./js/index.js"></script>
+    <script defer src="./js/index.js"></script>
     <link href="./css/index.css" rel="stylesheet">
     <link href="./css/gamelist.css" rel="stylesheet">
     <meta content="Kuuuuuuuu, wuw6248(wuw-sh)" name="Author">
@@ -36,13 +36,24 @@
     </div>
     <!-------- Main Page -------->
     <div id="main">
-        <div id="social">
-            <a href="https://github.com/Kuuuuuuuu">
-                <button class="glow-on-hover">Github (Dev 1)</button>
-            </a>
-            <a href="https://github.com/wuw-sh">
-                <button class="glow-on-hover">Github (Dev 2)</button>
-            </a>
+        <div id="pSlider">
+            <ol dir="ltr" id="slider-container">
+                <li class="li_slide" id="slide_1">
+                    <div class="slide-snapper"></div>
+                    <a class="prev_slide" href="#slide_3"></a>
+                    <a class="next_slide" href="#slide_2"></a>
+                </li>
+                <li class="li_slide" id="slide_2">
+                    <div class="slide-snapper"></div>
+                    <a class="prev_slide" href="#slide_1"></a>
+                    <a class="next_slide" href="#slide_3"></a>
+                </li>
+                <li class="li_slide" id="slide_3">
+                    <div class="slide-snapper"></div>
+                    <a class="prev_slide" href="#slide_2"></a>
+                    <a class="next_slide" href="#slide_1"></a>
+                </li>
+            </ol>
         </div>
     </div>
     <!-------- Game list -------->

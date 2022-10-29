@@ -50,16 +50,16 @@ body {
 }
 
 #nav-base {
-    position: absolute !important;
+    position: fixed !important;
     width: 100%;
     display: none;
+    z-index: 9999;
 }
 
 .nav {
     height: 50px;
     width: 100%;
     background-color: rgba(255, 102, 0, 0.7);
-    z-index: 1000;
 }
 
 .nav > .nav-header {
@@ -228,4 +228,196 @@ body {
     100% {
         background-position: 0 0;
     }
+}
+
+#slider-base {
+    position: relative !important;
+}
+
+#slide_1 {
+    background-image: url("../images/02.jpg");
+}
+
+#slide_2 {
+    background-image: url("../images/03.jpg");
+}
+
+#slide_3 {
+    background-image: url("../images/05.jpg");
+}
+
+.li_slide {
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes tonext {
+    75% {
+        margin-left: 0;
+    }
+    95% {
+        margin-left: calc(100% + 150px);
+    }
+    98% {
+        margin-left: calc(100% + 150px);
+    }
+    99% {
+        margin-left: 0;
+    }
+}
+
+@keyframes snap {
+    96% {
+        scroll-snap-align: start;
+    }
+    97% {
+        scroll-snap-align: none;
+    }
+    99% {
+        scroll-snap-align: none;
+    }
+    100% {
+        scroll-snap-align: start;
+    }
+}
+
+@keyframes tostart {
+    75% {
+        margin-left: 0;
+    }
+    95% {
+        margin-left: calc(-300% - 450px);
+    }
+    98% {
+        margin-left: calc(-300% - 450px);
+    }
+    99% {
+        margin-left: 0;
+    }
+}
+
+ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#pSlider {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin-top: -20%;
+    margin-left: 70%;
+}
+
+#pSlider #slider-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+#pSlider #slider-container .li_slide {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    background-color: khaki;
+    flex: none;
+    margin-right: 150px;
+}
+
+#pSlider #slider-container .li_slide:nth-child(even) {
+    background-color: mediumaquamarine;
+}
+
+#pSlider #slider-container .li_slide:last-child {
+    margin-right: 0;
+}
+
+#pSlider #slider-container .li_slide .slide-snapper {
+    scroll-snap-align: start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: tonext 4s infinite ease, snap 4s infinite ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #pSlider #slider-container .li_slide .slide-snapper {
+        animation-name: none;
+    }
+}
+
+#pSlider #slider-container .li_slide:last-child .slide-snapper {
+    animation-name: tostart, snap;
+}
+
+#pSlider #slider-container:hover .li_slide .slide-snapper, #pSlider #slider-container:focus-within .li_slide .slide-snapper {
+    animation-name: none;
+}
+
+#pSlider:before, #pSlider:after, #pSlider .prev_slide, #pSlider .next_slide {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#pSlider:before, #pSlider:after {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+
+#pSlider .next_slide {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+}
+
+#pSlider .prev_slide {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px;
+}
+
+#pSlider:before, #pSlider .prev_slide {
+    content: "";
+    left: 0;
+}
+
+#pSlider:after, #pSlider .next_slide {
+    content: "";
+    right: 0;
+}
+
+#pSlider:after {
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='60' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3Cpolyline points='10 10 30 30 10 50' stroke='rgba(255,255,255,0.9)' stroke-width='4' stroke-linecap='butt' fill='none' stroke-linejoin='round'%3E&lt;%3C/polyline%3E%3C/svg%3E");
+}
+
+#pSlider:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='60' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3Cpolyline points='30 10 10 30 30 50' stroke='rgba(255,255,255,0.9)' stroke-width='4' stroke-linecap='butt' fill='none' stroke-linejoin='round'%3E&gt;%3C/polyline%3E%3C/svg%3E");
+}
+
+/* Scrollbar */
+#pSlider #slider-container::-webkit-scrollbar {
+    display: none;
+    height: 5px;
+}
+
+#pSlider #slider-container::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 50px;
+}
+
+#pSlider #slider-container::-webkit-scrollbar-track {
+    background-color: transparent;
 }
