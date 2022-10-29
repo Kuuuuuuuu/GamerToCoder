@@ -25,9 +25,8 @@ function start() {
                 offset = 0;
                 document.title = "Gamer To Coder";
                 document.getElementById("hacking").style.display = "none";
-                document.getElementById("body").style.backgroundColor = "black";
-                document.getElementById("main").style.display = "flex";
-                document.getElementById("main").style.animation = "none";
+                document.getElementById("main").style.display = "block";
+                document.getElementById("nav-base").style.display = "block";
                 document.getElementById("body").style.background = "url('../images/blockmangowallpaper.png') no-repeat center center fixed";
                 clearInterval(interval);
             }
