@@ -452,22 +452,6 @@ ol, li {
     display: none;
 }
 
-.ripple {
-    width: 10px;
-    height: 10px;
-    background-color: transparent;
-    position: fixed;
-    border-radius: 50%;
-    border: 1px solid rgba(245, 152, 101, 0.54);
-}
-
-@keyframes ripple-effect {
-    to {
-        transform: scale(15);
-        opacity: 0.01;
-    }
-}
-
 #footer {
     width: 100%;
     background: #000000;
