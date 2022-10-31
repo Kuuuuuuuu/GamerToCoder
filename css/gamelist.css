@@ -8,9 +8,6 @@
     border-style: solid;
     padding: 10px;
     margin: 10px;
-    transform-origin: center;
-    transform: perspective(800px) rotateY(10deg);
-    transition: 0.5s;
     border-radius: 10px;
     display: inline-block;
     z-index: -20;
@@ -33,17 +30,14 @@ a:hover {
         -webkit-transform-origin: center center;
         -webkit-transform: scale(1.2, 1.1);
     }
-
     40% {
         -webkit-transform-origin: center center;
         -webkit-transform: scale(0.95, 0.95);
     }
-
     75% {
         -webkit-transform-origin: center center;
         -webkit-transform: scale(1.05, 1);
     }
-
     100% {
         -webkit-transform-origin: center center;
         -webkit-transform: scale(1, 1);
@@ -51,7 +45,6 @@ a:hover {
 }
 
 .card:hover {
-    transform: perspective(800px) rotateY(0deg);
     animation: spring 300ms ease-out;
 }
 
@@ -81,7 +74,31 @@ a:hover {
     cursor: pointer;
 }
 
-#gamelist {
-    display: none;
-    margin-top: 20rem;
+.cardimg {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(147, 224, 248, 0.86);
+    text-align: center;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    z-index: -20;
+}
+
+.cardimg img {
+    min-width: 100%;
+    min-height: 50%;
+    max-height: 50%;
+    margin-top: 20px;
+    scale: 1;
+    width: 200px;
+}
+
+.cardimg:hover {
+    animation: spring 300ms ease-out;
+    background-color: #FFFFFF;
 }

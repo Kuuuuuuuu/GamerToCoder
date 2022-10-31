@@ -8,10 +8,10 @@
     <link href="./css/gamelist.css" rel="stylesheet">
     <meta content="Kuuuuuuuu, wuw-sh" name="Author">
     <meta content="en" http-equiv="Content-Language">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" name="viewport"/>
 </head>
 
-<body id="body" onload="start(); loadGame();">
+<body id="body" onload="start(); loadGame(); loadCharacters();">
 <div id="nav-base">
     <div class="nav">
         <input id="nav-check" type="checkbox">
@@ -26,7 +26,10 @@
             </label>
         </div>
         <div class="nav-links">
-            <a href="./index.html" target="_blank">Home</a>
+            <a href="#body">Home</a>
+            <a href="#gamelist">Minigames</a>
+            <a href="#characterslist">Characters</a>
+            <a href="#creditslist">Credits</a>
         </div>
     </div>
 </div>
@@ -56,8 +59,65 @@
             </ol>
         </div>
     </div>
+    <!--------- ignore this ---------->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--------- ignore this ---------->
+
     <!-------- Game list -------->
-    <div id="gamelist"></div>
+    <div id="gamelist">
+        <h2 class="bigfont">Hot Games</h2>
+        <br>
+    </div>
+
+    <!-------- Character list -------->
+    <div id="characterslist">
+        <h2 class="bigfont">Characters</h2>
+        <br>
+    </div>
+
+    <!-------- Credits list -------->
+    <div id="creditslist">
+        <h2 class="bigfont">Credits</h2>
+        <br>
+        <a href="https://github.com/wuw-sh">
+            <p class="credit-font">Github: wuw-sh</p>
+            <br>
+            <br>
+            <p class="credit-font">Click me >.<</p>
+            <div class="credit-card">
+                <img alt="icon" src="./images/87937525.png"/>
+            </div>
+        </a>
+        <!--------- ignore this ---------->
+        <br>
+        <br>
+        <br>
+        <br>
+        <!--------- ignore this ---------->
+        <a href="https://github.com/Kuuuuuuuu">
+            <p class="credit-font">Github: Kuuuuuuuu</p>
+            <br>
+            <br>
+            <p class="credit-font">Click me >.<</p>
+            <div class="credit-card">
+                <img alt="icon" src="./images/69802296.png"/>
+            </div>
+        </a>
+        <br>
+        <br>
+        <p class="bigfont" style="color:transparent">-------------------------------------------------------</p>
+    </div>
 </div>
 </body>
 </html>

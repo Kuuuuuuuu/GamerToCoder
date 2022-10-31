@@ -28,6 +28,8 @@ function start() {
                 document.getElementById("main").style.display = "block";
                 document.getElementById("nav-base").style.display = "block";
                 document.getElementById("gamelist").style.display = "inline-block";
+                document.getElementById("creditslist").style.display = "inline-block";
+                document.getElementById("characterslist").style.display = "inline-block";
                 document.getElementById("body").style.background = "url('../images/blockmangowallpaper.png') no-repeat center center fixed";
                 clearInterval(interval);
             }
@@ -57,7 +59,7 @@ function loadGame() {
                 const currentData = data[i];
                 const newListItem = document.createElement("li");
                 newListItem.classList.add("card");
-                const genre_array = currentData.genre;
+                const genre_array = currentData['genre'];
                 let genre_string = genre_array[0];
                 if (genre_array.length > 1) {
                     for (let j = 1; j < genre_array.length; j++) {
@@ -65,12 +67,34 @@ function loadGame() {
                     }
                 }
                 const html =
-                    '<div class="name" onclick="changeName(' + currentData.name + ')"> ชื่อ: ' + currentData.name + '</div>'
+                    '<div class="name"> ชื่อ: ' + currentData.name + '</div>'
                     + '<img src="' + currentData.icon + '" alt="icon"/>'
                     + '<div class="genre">ประเภท: ' + genre_string + '</div>'
                     + '<div class="detail">' + currentData.description + '</div>'
                 newListItem.innerHTML = html.trim();
                 document.getElementById("gamelist").appendChild(newListItem);
+            }
+        }
+    });
+}
+
+function loadCharacters() {
+    fetch("https://gamertocoder.garena.co.th/api/assets").then((response) => {
+        if (response.status !== 200) {
+            return response.status;
+        }
+        return response.json();
+    }).then((data) => {
+        if (typeof data === "number") {
+            alert(data);
+        } else {
+            for (let i = 0; i < data["characters"].length; i++) {
+                const currentData = data["characters"][i];
+                const newListItem = document.createElement("li");
+                newListItem.classList.add("cardimg");
+                const html = '<img src="' + currentData + '" alt="icon"/>';
+                newListItem.innerHTML = html.trim();
+                document.getElementById("characterslist").appendChild(newListItem);
             }
         }
     });
