@@ -463,6 +463,7 @@ ol, li {
     width: 100%;
     background: #000000;
     display: none;
+    color: white;
 }
 
 .inner-footer {
@@ -503,7 +504,7 @@ ol, li {
 
 ul {
     list-style: none;
-    color: #fff;
+    color: white;
     font-size: 15px;
     letter-spacing: 1px;
 }
