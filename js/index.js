@@ -41,7 +41,8 @@ function start() {
                 document.getElementById("creditslist").style.display = "inline-block";
                 document.getElementById("title").style.display = "block";
                 document.getElementById("characterslist").style.display = "inline-block";
-                document.getElementById("body").style.background = "url('../images/blockmangowallpaper.png') no-repeat center center fixed";
+                document.getElementById("bg").style.display = "block";
+                document.getElementById("footer").style.display = "block";
                 clearInterval(interval);
             }
         }
@@ -115,8 +116,13 @@ document.addEventListener('click', applyCursorRippleEffect);
 
 function applyCursorRippleEffect(t) {
     const e = document.createElement("div");
-    e.className = "ripple", document.body.appendChild(e), e.style.left = t.clientX + "px", e.style.top = t.clientY + "px", e.style.animation = "ripple-effect .4s  linear", e.onanimationend = () => {
-        document.body.removeChild(e)
+    e.className = "ripple";
+    document.body.appendChild(e);
+    e.style.left = t.clientX + "px";
+    e.style.top = t.clientY + "px";
+    e.style.animation = "ripple-effect .4s  linear";
+    e.onanimationend = () => {
+        document.body.removeChild(e);
     }
 }
 
