@@ -1,11 +1,21 @@
+/*  Settings  */
+
+const CooldownHackingPage = 20;
+const gameapi = "https://gamertocoder.garena.co.th/api/minigames";
+const assetsapi = "https://gamertocoder.garena.co.th/api/assets";
+const words = ["Granting access to server [blockmango.garena.com]", "Access Granted!"];
+let i = 0;
+let offset = 0;
+let forwards = true;
+let skip_count = 0;
+
+/*  Settings  */
+
 function start() {
-    const words = ["Granting access to server [blockmango.garena.com]", "Access Granted!"];
-    const length = words.length;
-    let i = 0;
-    let offset = 0;
-    let forwards = true;
-    let skip_count = 0;
+    loadGame();
+    loadCharacters();
     document.title = "Hacking...";
+    const length = words.length;
     const interval = setInterval(() => {
         if (forwards) {
             if (offset >= words[i].length) {
@@ -42,11 +52,11 @@ function start() {
             }
         }
         document.getElementById("hacking-text").innerHTML = words[i].substring(0, offset);
-    }, 40);
+    }, CooldownHackingPage);
 }
 
 function loadGame() {
-    fetch("https://gamertocoder.garena.co.th/api/minigames").then((response) => {
+    fetch(gameapi).then((response) => {
         if (response.status !== 200) {
             return response.status;
         }
@@ -79,7 +89,7 @@ function loadGame() {
 }
 
 function loadCharacters() {
-    fetch("https://gamertocoder.garena.co.th/api/assets").then((response) => {
+    fetch(assetsapi).then((response) => {
         if (response.status !== 200) {
             return response.status;
         }
@@ -99,3 +109,5 @@ function loadCharacters() {
         }
     });
 }
+
+// actually this code is very shit and super unoptimized
