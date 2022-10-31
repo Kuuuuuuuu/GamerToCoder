@@ -427,7 +427,12 @@ ol, li {
 #gamelist {
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(94, 9, 121, 1) 30%, rgba(70, 19, 127, 1) 55%, rgba(128, 43, 178, 1) 73%, rgba(0, 0, 0, 1) 100%);
     background-size: cover;
+    display: none;
+}
 
+#ratinglist {
+    background: linear-gradient(90deg, rgba(36,0,32,1) 0%, rgba(121,9,101,1) 30%, rgba(217,21,175,1) 55%, rgba(204,50,184,1) 73%, rgba(194,36,227,1) 85%, rgba(0,0,0,1) 100%, rgba(244,12,233,1) 100%);
+    background-size: cover;
     display: none;
 }
 

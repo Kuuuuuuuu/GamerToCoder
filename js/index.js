@@ -39,6 +39,7 @@ function start() {
                 document.getElementById("nav-base").style.display = "block";
                 document.getElementById("gamelist").style.display = "inline-block";
                 document.getElementById("creditslist").style.display = "inline-block";
+                document.getElementById("ratinglist").style.display = "block";
                 document.getElementById("title").style.display = "block";
                 document.getElementById("characterslist").style.display = "inline-block";
                 document.getElementById("bg").style.display = "block";

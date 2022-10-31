@@ -1,0 +1,99 @@
+.cardratings-rating {
+    margin: 2rem 0 1rem;
+    background-color: white;
+    border-radius: 4rem;
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating-base {
+    scale: 0.7;
+}
+
+.ratings {
+    display: flex;
+    align-items: center;
+    grid-gap: 1.2rem;
+}
+
+.ratings img {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.cardratings-rating-text {
+    font-size: 1.6rem;
+    color: black;
+    font-weight: 400;
+}
+
+.rating-count {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: white;
+}
+
+.rating-percents {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 1.5rem;
+}
+
+.rating-percent {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rating-no {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: yellow;
+}
+
+.rating-progress {
+    margin: 0 .8rem;
+    background-color: white;
+    border-radius: 1.8rem;
+    width: 28rem;
+    height: 2rem;
+    position: relative;
+}
+
+.rating-progress::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #FCCC4D;
+    border-radius: 1.8rem;
+}
+
+.rating-percent:nth-child(1) .rating-progress::before {
+    width: 84%;
+}
+
+.rating-percent:nth-child(2) .rating-progress::before {
+    width: calc(2 * 9%);
+}
+
+.rating-percent:nth-child(3) .rating-progress::before {
+    width: calc(2 * 4%);
+}
+
+.rating-percent:nth-child(4) .rating-progress::before {
+    width: calc(2 * 2%);
+}
+
+.rating-percent:nth-child(5) .rating-progress::before {
+    width: calc(2 * 1%);
+}
+
+.rating-percent-no {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 400;
+}
