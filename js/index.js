@@ -43,7 +43,6 @@ function start() {
                 document.getElementById("title").style.display = "block";
                 document.getElementById("characterslist").style.display = "inline-block";
                 document.getElementById("bg").style.display = "block";
-                document.getElementById("hack").style.display = "none";
                 document.getElementById("footer").style.display = "block";
                 clearInterval(interval);
             }

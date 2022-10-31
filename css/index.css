@@ -28,15 +28,8 @@ body {
     background: black;
 }
 
-#hack {
-    display: block;
-}
-
 #bg {
     display: none;
-}
-
-.bg {
     top: 1px;
     position: fixed;
     min-width: 100%;
@@ -479,6 +472,7 @@ ol, li {
     flex-wrap: wrap;
     box-sizing: border-box;
     justify-content: center;
+    color: #fff;
 }
 
 .footer-items {
