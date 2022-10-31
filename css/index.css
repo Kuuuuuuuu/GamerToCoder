@@ -28,8 +28,15 @@ body {
     background: black;
 }
 
+#hack {
+    display: block;
+}
+
 #bg {
     display: none;
+}
+
+.bg {
     top: 1px;
     position: fixed;
     min-width: 100%;
