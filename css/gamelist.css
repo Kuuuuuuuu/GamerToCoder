@@ -66,7 +66,7 @@ a:hover {
 }
 
 .card:hover {
-    background-color: #FFFFFF;
+    background-color: rgba(255, 102, 0, 0.7);
 }
 
 .name:hover {
@@ -100,5 +100,5 @@ a:hover {
 
 .cardimg:hover {
     animation: spring 300ms ease-out;
-    background-color: #FFFFFF;
+    background-color: rgba(255, 102, 0, 0.7);
 }

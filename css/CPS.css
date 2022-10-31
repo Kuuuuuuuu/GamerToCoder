@@ -1,0 +1,55 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    color: #eee;
+    font-size: 0.875rem;
+    cursor: url("data:image/svg+xml,%3Csvg height='6' width='6' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' fill='%23eee' r='4'/%3E%3C/svg%3E") 3 3, auto;
+    background-color: #264d75;
+    vertical-align: middle;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+.text {
+    text-align: center;
+    align-content: center;
+    color: #ffffff;
+}
+
+.textsmall {
+    text-align: center;
+    align-content: center;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+h3,
+h4 {
+    user-select: none;
+    text-align: center;
+    align-content: center;
+    color: #ffffff;
+}
+
+.time {
+    font-size: 25px;
+}
+
+.btn,
+.box {
+    width: 180px;
+    height: 30px;
+    border: none;
+    position: relative;
+    outline: none;
+    color: #fff;
+    text-align: center;
+    background: rgb(0, 150, 255);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.wrapper {
+    text-align: center;
+}
